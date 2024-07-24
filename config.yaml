@@ -1,0 +1,33 @@
+# General settings
+general:
+  seed: 42  # Random seed for reproducibility
+
+# Data settings
+data:
+  data_root: 'E:\2D_Virtual_try-on\data'  # Root directory where your dataset is stored
+  image_size: 256  # Size to resize images to
+  batch_size: 32  # Number of images per batch
+  num_workers: 4  # Number of DataLoader workers for data loading
+
+# Model settings
+model:
+  generator:
+    num_layers: 6  # Number of layers in the generator network
+    num_channels: 64  # Number of channels in the first convolutional layer
+    dropout: 0.5  # Dropout probability (if applicable)
+  discriminator:
+    num_layers: 5  # Number of layers in the discriminator network
+    num_channels: 64  # Number of channels in the first convolutional layer
+
+# Training settings
+training:
+  num_epochs: 50  # Number of training epochs
+  learning_rate: 0.001  # Initial learning rate
+  weight_decay: 0.0001  # L2 regularization weight decay
+  log_interval: 10  # Interval for logging training progress
+  checkpoint_interval: 5  # Interval for saving model checkpoints
+
+# Testing settings
+testing:
+  checkpoint_path: '/path/to/your/saved/checkpoint.pth'  # Path to the saved model checkpoint
+  output_dir: '/path/to/save/test/results'  # Directory to save test results
